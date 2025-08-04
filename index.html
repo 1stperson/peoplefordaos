@@ -1,0 +1,800 @@
+<!-- inspired by: codrops article 
+ -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>people4DAOs</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+  <script type="module" crossorigin src="./assets/index-NXL4cYUx.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-Cym0Hd8J.css">
+</head>
+
+<body>
+  <svg class="hidden">
+    <symbol id="icon-arrow" viewBox="0 0 24 24">
+      <title>arrow</title>
+      <polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 " />
+    </symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 13">
+      <title>menu</title>
+      <path
+        d="M.75 1.515h22.498a.75.75 0 0 0 0-1.5H.75a.75.75 0 0 0 0 1.5zM23.248 5.265H8.168a.75.75 0 0 0 0 1.5h15.08a.75.75 0 0 0 0-1.5zM23.248 10.514H4.322a.75.75 0 0 0 0 1.5h18.926a.75.75 0 0 0 0-1.5z" />
+    </symbol>
+    <symbol id="icon-dot" viewBox="0 0 24 24">
+      <title>dot</title>
+      <path
+        d="M11.5 9c-.69 0-1.28.244-1.768.732A2.41 2.41 0 0 0 9 11.5c0 .69.244 1.28.732 1.767A2.409 2.409 0 0 0 11.5 14c.69 0 1.28-.244 1.768-.733A2.408 2.408 0 0 0 14 11.5c0-.69-.244-1.28-.732-1.768A2.408 2.408 0 0 0 11.5 9z" />
+    </symbol>
+    <symbol id="icon-cross" viewBox="0 0 24 24">
+      <title>cross</title>
+      <path
+        d="M11.449 11.962l-5.1 5.099a.363.363 0 1 0 .513.512L12 12.436l5.137 5.137a.361.361 0 0 0 .513 0 .363.363 0 0 0 0-.512l-5.099-5.1 5.102-5.102a.363.363 0 1 0-.512-.513L12 11.487l-5.141-5.14a.363.363 0 0 0-.513.512l5.103 5.103z" />
+    </symbol>
+    <symbol id="icon-arrowlong" viewBox="0 0 32 11">
+      <title>arrow-long</title>
+      <path
+        d="M27.166.183a.619.619 0 0 0-.878 0 .619.619 0 0 0 0 .878l2.735 2.735H.768a.624.624 0 0 0 0 1.248h28.254L26.287 7.77a.619.619 0 0 0 0 .878.617.617 0 0 0 .441.183c.163 0 .32-.061.442-.183l3.796-3.796a.623.623 0 0 0-.005-.878L27.166.183z" />
+    </symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24">
+      <title>close</title>
+      <path
+        d="M21 4.565L19.435 3 12 10.435 4.565 3 3 4.565 10.435 12 3 19.435 4.565 21 12 13.565 19.435 21 21 19.435 13.565 12z" />
+    </symbol>
+    <symbol id="icon-navup" viewBox="0 0 50 50">
+      <title>navup</title>
+      <path
+        d="M20.259 28.211l5.07-5.03 5.075 5.034a.36.36 0 0 0 .51 0 .356.356 0 0 0 0-.506l-5.323-5.28a.404.404 0 0 0-.135-.084.364.364 0 0 0-.384.08l-5.324 5.28a.356.356 0 0 0 0 .506c.141.14.37.14.51 0z" />
+    </symbol>
+    <symbol id="icon-navdown" viewBox="0 0 50 50">
+      <title>navdown</title>
+      <path
+        d="M20.259 22.43l5.07 5.03 5.075-5.034a.36.36 0 0 1 .51 0c.14.14.14.366 0 .506l-5.323 5.28a.404.404 0 0 1-.135.084.364.364 0 0 1-.384-.081l-5.324-5.28a.356.356 0 0 1 0-.505c.141-.14.37-.14.51 0z" />
+    </symbol>
+    <symbol id="icon-grid" viewBox="0 0 24 24">
+      <title>grid</title>
+      <path
+        d="M8.982 8.982h5.988v5.988H8.982zM0 0h5.988v5.988H0zM8.982 17.965h5.988v5.988H8.982zM0 8.982h5.988v5.988H0zM0 17.965h5.988v5.988H0zM17.965 0h5.988v5.988h-5.988zM8.982 0h5.988v5.988H8.982zM17.965 8.982h5.988v5.988h-5.988zM17.965 17.965h5.988v5.988h-5.988z" />
+    </symbol>
+    <symbol id="icon-tick" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round">
+      <title>tick</title>
+      <path d="M20 6 9 17l-5-5" />
+    </symbol>
+    <symbol id="icon-success" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-linecap="round"
+      stroke-linejoin="round">
+      <title>success</title>
+      <path d="M7 7h10v10"></path>
+      <path d="M7 17 17 7"></path>
+    </symbol>
+    <symbol id="icon-fractional" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-linecap="round"
+      stroke-linejoin="round">
+      <title>fractional</title>
+      <circle cx="12" cy="12" r="10"></circle>
+      <circle cx="12" cy="12" r="6"></circle>
+      <circle cx="12" cy="12" r="2"></circle>
+    </symbol>
+    <symbol id="icon-people" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-linecap="round"
+      stroke-linejoin="round">
+      <title>people</title>
+      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+      <circle cx="9" cy="7" r="4"></circle>
+      <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+      <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+    </symbol>
+    <symbol id="icon-brain" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-linecap="round"
+      stroke-linejoin="round">
+      <title>brain</title>
+      <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path>
+      <path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"></path>
+      <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"></path>
+      <path d="M17.599 6.5a3 3 0 0 0 .399-1.375"></path>
+      <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path>
+      <path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path>
+      <path d="M19.938 10.5a4 4 0 0 1 .585.396"></path>
+      <path d="M6 18a4 4 0 0 1-1.967-.516"></path>
+      <path d="M19.967 17.484A4 4 0 0 1 18 18"></path>
+    </symbol>
+    <symbol id="icon-pie" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round">
+      <title>pie</title>
+      <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+      <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+    </symbol>
+    <symbol id="icon-safe" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round">
+      <title>safe</title>
+      <path
+        d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+      </path>
+    </symbol>
+  </svg>
+  <main>
+    <header class="sections__header">
+      <img class="logo" src="./logos/people4DAOs_logo.png" alt="people4DAOs logo" />
+      <h1 class="title">people4DAOs</h1>
+    </header>
+    <!-- menu -->
+    <nav class="menu">
+      <ul class="menu__inner">
+        <li class="menu__item"><a class="menu__item-link" href="#Services">Our Services</a></li>
+        <li class="menu__item"><a class="menu__item-link" href="#Story">Our Story</a></li>
+        <li class="menu__item"><a class="menu__item-link" href="#Case_Study">Case Studies</a></li>
+      </ul>
+      <div class="menu__toggle">
+        <span class="menu__toggle-inner menu__toggle-inner--open">
+          <svg class="icon icon--menu">
+            <use xlink:href="#icon-menu"></use>
+          </svg>
+        </span>
+        <span class="menu__toggle-inner menu__toggle-inner--close">
+          <svg class="icon icon--close">
+            <use xlink:href="#icon-close"></use>
+          </svg>
+        </span>
+      </div>
+    </nav>
+    <!-- index -->
+    <div class="sections__index">
+      <span class="sections__index-current">
+        <span class="sections__index-inner">01</span>
+        <span class="sections__index-inner">02</span>
+        <span class="sections__index-inner">03</span>
+        <span class="sections__index-inner">04</span>
+      </span>
+      <span class="sections__index-total">04</span>
+    </div>
+    <div class="sections">
+      <!-- sections -->
+      <section class="section">
+        <div class="section__content">
+          <h2 class="section__title">Empowering Organizations with People Excellence</h2>
+          <p class="section__description">
+            <span class="section__description-inner">
+              People strategy solutions for a decentralized future.
+            </span>
+          </p>
+          <br>
+          <a href="#Services" class="btn-style"> See our services </a>
+        </div>
+        <div class="section_right">
+          <div class="section__expander"></div>
+          <div class="section__info">
+            <ul class="section__facts">
+              <li class="section__facts-item">
+                <h3 class="section__facts-number">10+</h3>
+                <span class="section__facts-detail">Companies served</span>
+              </li>
+              <li class="section__facts-item">
+                <h3 class="section__facts-number">20+</h3>
+                <span class="section__facts-detail">Years of experience</span>
+              </li>
+              <li class="section__facts-item">
+                <h3 class="section__facts-number">50+</h3>
+                <span class="section__facts-detail">Projects completed</span>
+              </li>
+              <li class="section__facts-item">
+                <h3 class="section__facts-number">25+</h3>
+                <span class="section__facts-detail">Countries reached</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section><!--/ section -->
+      <section class="section" id="Services">
+        <div class="section__content">
+          <h2 class="section__title">Our Services</h2>
+          <p class="section__description"><span class="section__description-inner">We provide comprehensive services
+              including organizational culture development, people operations management, compliance frameworks, token
+              incentive design, and strategic planning for DAOs.</span>
+          </p>
+        </div>
+        <div class="section_right">
+          <div class="section__expander">
+          </div>
+          <div class="section__info">
+            <ul class="section__facts info">
+              <details>
+                <summary class="section__facts-item card">
+                  <h3 class="section__facts-title">
+                    <svg class="icon icon--fractional">
+                      <use xlink:href="#icon-fractional"></use>
+                    </svg> Fractional Chief People Officer
+                  </h3>
+                  <span class="section__facts-detail">
+                    Organizational strategy without the financial burden of a full-time executive
+                    <ul class="hidden_text">
+                      <li>
+                        <h4>Key Features</h4>
+                        <ol>
+                          <li><svg class="icon icon--tick">
+                              <use xlink:href="#icon-tick"></use>
+                            </svg>Direct partnering with founders</li>
+                          <li><svg class="icon icon--tick">
+                              <use xlink:href="#icon-tick"></use>
+                            </svg>Focused projects or organization-wide assessments</li>
+                          <li><svg class="icon icon--tick">
+                              <use xlink:href="#icon-tick"></use>
+                            </svg>Purpose and values alignment workshops</li>
+                          <li><svg class="icon icon--tick">
+                              <use xlink:href="#icon-tick"></use>
+                            </svg>Interim leadership with lasting impact</li>
+                        </ol>
+                      </li>
+                      <li>
+                        <h4>Benefits</h4>
+                        <ol class="square-list">
+                          <li> <svg class="icon icon--success">
+                              <use xlink:href="#icon-success"></use>
+                            </svg>Leverage deep organizational expertise</li>
+                          <li> <svg class="icon icon--success">
+                              <use xlink:href="#icon-success"></use>
+                            </svg>Jump-start international and team growth</li>
+                          <li> <svg class="icon icon--success">
+                              <use xlink:href="#icon-success"></use>
+                            </svg>Create resilient practices and programs</li>
+                          <li> <svg class="icon icon--success">
+                              <use xlink:href="#icon-success"></use>
+                            </svg>Stronger community bonds</li>
+                        </ol>
+                      </li>
+                      <li>
+                        <h4>Options</h4>
+                        <ol class="numbered-list">
+                          <li>Long or short-term engagements</li>
+                          <li>Project or retainer based payments</li>
+                          <li>Fiat, stablecoin, token or equity payments</li>
+                        </ol>
+                      </li>
+                    </ul>
+                  </span>
+                  <span class="toggle_text isClosed">
+                    <svg class="icon icon--dot">
+                      <use xlink:href="#icon-dot"></use>
+                    </svg> Read more
+                  </span>
+                  <span class="toggle_text isOpen">
+                    <svg class="icon icon--cross">
+                      <use xlink:href="#icon-cross"></use>
+                    </svg> Read less
+                  </span>
+                </summary>
+              </details>
+              <details>
+                <summary class="section__facts-item card">
+                  <h3 class="section__facts-title"> <svg class="icon icon--people">
+                      <use xlink:href="#icon-people"></use>
+                    </svg> Organizational Culture</h3>
+                  <span class="section__facts-detail">
+                    Build and maintain a thriving culture that aligns with your organization’s purpose and values.
+                    <ul class="hidden_text">
+                      <li>
+                        <h4>
+                          Key Features
+                        </h4>
+                        <ol>
+                          <li><svg class="icon icon--tick">
+                              <use xlink:href="#icon-tick"></use>
+                            </svg>Culture assessment and strategy</li>
+                          <li><svg class="icon icon--tick">
+                              <use xlink:href="#icon-tick"></use>
+                            </svg>Team engagement programs</li>
+                          <li><svg class="icon icon--tick">
+                              <use xlink:href="#icon-tick"></use>
+                            </svg>Values alignment workshops</li>
+                          <li><svg class="icon icon--tick">
+                              <use xlink:href="#icon-tick"></use>
+                            </svg>Remote-first best practices</li>
+                        </ol>
+                      <li>
+                        <h4>
+                          Benefits
+                        </h4>
+                        <ol>
+                          <li> <svg class="icon icon--success">
+                              <use xlink:href="#icon-success"></use>
+                            </svg>Increased team cohesion</li>
+                          <li> <svg class="icon icon--success">
+                              <use xlink:href="#icon-success"></use>
+                            </svg>Higher contributor retention</li>
+                          <li> <svg class="icon icon--success">
+                              <use xlink:href="#icon-success"></use>
+                            </svg>Improved collaboration</li>
+                          <li> <svg class="icon icon--success">
+                              <use xlink:href="#icon-success"></use>
+                            </svg>Stronger community bonds</li>
+                        </ol>
+                      </li>
+                      <li>
+                        <h4>
+                          Our Process
+                        </h4>
+                        <ol class="numbered-list">
+                          <li>Initial culture assessment</li>
+                          <li>Strategy development</li>
+                          <li>Implementation support</li>
+                          <li>Continuous improvement</li>
+                        </ol>
+                      </li>
+                    </ul>
+                  </span>
+                  <span class="toggle_text isClosed">
+                    <svg class="icon icon--dot">
+                      <use xlink:href="#icon-dot"></use>
+                    </svg> Read more
+                  </span>
+                  <span class="toggle_text isOpen">
+                    <svg class="icon icon--cross">
+                      <use xlink:href="#icon-cross"></use>
+                    </svg> Read less
+                  </span>
+                </summary>
+              </details>
+              <details>
+                <summary class="section__facts-item card">
+                  <h3 class="section__facts-title"><svg class="icon icon--brain">
+                      <use xlink:href="#icon-brain"></use>
+                    </svg> People Operations</h3>
+                  <span class="section__facts-detail">
+                    Streamline people management processes with efficient and transparent systems.
+                    <ul class="hidden_text">
+                      <li>
+                        <h4>
+                          Key Features
+                        </h4>
+                        <ol>
+                          <li><svg class="icon icon--tick">
+                              <use xlink:href="#icon-tick"></use>
+                            </svg> Talent acquisition strategy</li>
+                          <li><svg class="icon icon--tick">
+                              <use xlink:href="#icon-tick"></use>
+                            </svg> Onboarding optimization</li>
+                          <li><svg class="icon icon--tick">
+                              <use xlink:href="#icon-tick"></use>
+                            </svg> Performance frameworks</li>
+                          <li><svg class="icon icon--tick">
+                              <use xlink:href="#icon-tick"></use>
+                            </svg> Contributor development</li>
+                        </ol>
+
+                      </li>
+                      <li>
+                        <h4>
+                          Benefits
+                        </h4>
+                        <ol>
+                          <li> <svg class="icon icon--success">
+                              <use xlink:href="#icon-success"></use>
+                            </svg>Reduced onboarding time</li>
+                          <li> <svg class="icon icon--success">
+                              <use xlink:href="#icon-success"></use>
+                            </svg>Better talent retention</li>
+                          <li> <svg class="icon icon--success">
+                              <use xlink:href="#icon-success"></use>
+                            </svg>Clear growth paths</li>
+                          <li> <svg class="icon icon--success">
+                              <use xlink:href="#icon-success"></use>
+                            </svg>Improved productivity</li>
+                        </ol>
+
+                      </li>
+                      <li>
+                        <h4>
+                          Our Process
+                        </h4>
+                        <ol class="numbered-list">
+                          <li>Process audit</li>
+                          <li>System design</li>
+                          <li>Implementation</li>
+                          <li>Training and support</li>
+                        </ol>
+                      </li>
+                    </ul>
+                  </span>
+                  <span class="toggle_text isClosed">
+                    <svg class="icon icon--dot">
+                      <use xlink:href="#icon-dot"></use>
+                    </svg> Read more
+                  </span>
+                  <span class="toggle_text isOpen">
+                    <svg class="icon icon--cross">
+                      <use xlink:href="#icon-cross"></use>
+                    </svg> Read less
+                  </span>
+                </summary>
+              </details>
+              <details>
+                <summary class="section__facts-item card">
+                  <h3 class="section__facts-title"><svg class="icon icon--pie">
+                      <use xlink:href="#icon-pie"></use>
+                    </svg> People and Team Incentives</h3>
+                  <span class="section__facts-detail">
+                    Design effective compensation and incentive systems that align with organizational objectives.
+                    <ul class="hidden_text">
+                      <li>
+                        <h4>
+                          Key Features
+                        </h4>
+                        <ol>
+                          <li><svg class="icon icon--tick">
+                              <use xlink:href="#icon-tick"></use>
+                            </svg>Token and equity distribution models</li>
+                          <li><svg class="icon icon--tick">
+                              <use xlink:href="#icon-tick"></use>
+                            </svg>Incentive alignment</li>
+                          <li><svg class="icon icon--tick">
+                              <use xlink:href="#icon-tick"></use>
+                            </svg>Compensation frameworks</li>
+                          <li><svg class="icon icon--tick">
+                              <use xlink:href="#icon-tick"></use>
+                            </svg>Equity planning</li>
+                        </ol>
+                      </li>
+                      <li>
+                        <h4>
+                          Benefits
+                        </h4>
+                        <ol>
+                          <li> <svg class="icon icon--success">
+                              <use xlink:href="#icon-success"></use>
+                            </svg>Aligned incentives</li>
+                          <li> <svg class="icon icon--success">
+                              <use xlink:href="#icon-success"></use>
+                            </svg>Sustainable token and share programs</li>
+                          <li> <svg class="icon icon--success">
+                              <use xlink:href="#icon-success"></use>
+                            </svg>Equitable compensation</li>
+                          <li> <svg class="icon icon--success">
+                              <use xlink:href="#icon-success"></use>
+                            </svg>Long-term value</li>
+                        </ol>
+                      </li>
+                      <li>
+                        <h4>
+                          Our Process
+                        </h4>
+                        <ol class="numbered-list">
+                          <li>Economic analysis</li>
+                          <li>Model design</li>
+                          <li>Implementation plan</li>
+                          <li>Performance monitoring</li>
+                        </ol>
+                      </li>
+                    </ul>
+                  </span>
+                  <span class="toggle_text isClosed">
+                    <svg class="icon icon--dot">
+                      <use xlink:href="#icon-dot"></use>
+                    </svg> Read more
+                  </span>
+                  <span class="toggle_text isOpen">
+                    <svg class="icon icon--cross">
+                      <use xlink:href="#icon-cross"></use>
+                    </svg> Read less
+                  </span>
+                </summary>
+              </details>
+              <details>
+                <summary class="section__facts-item card">
+                  <h3 class="section__facts-title"><svg class="icon icon--safe">
+                      <use xlink:href="#icon-safe"></use>
+                    </svg>Global People Compliance</h3>
+                  <span class="section__facts-detail">
+                    Navigate the complex landscape of engaging people across countries
+                    <ul class="hidden_text">
+                      <li>
+                        <h4>
+                          Key Features
+                        </h4>
+                        <ol>
+                          <li><svg class="icon icon--tick">
+                              <use xlink:href="#icon-tick"></use>
+                            </svg>Legal framework assessment</li>
+                          <li><svg class="icon icon--tick">
+                              <use xlink:href="#icon-tick"></use>
+                            </svg>Compliance strategy</li>
+                          <li><svg class="icon icon--tick">
+                              <use xlink:href="#icon-tick"></use>
+                            </svg>Risk management</li>
+                          <li><svg class="icon icon--tick">
+                              <use xlink:href="#icon-tick"></use>
+                            </svg>Policy development</li>
+                        </ol>
+                      </li>
+                      <li>
+                        <h4>
+                          Benefits
+                        </h4>
+                        <ol>
+                          <li> <svg class="icon icon--success">
+                              <use xlink:href="#icon-success"></use>
+                            </svg>Understand contractor vs employment compliance</li>
+                          <li> <svg class="icon icon--success">
+                              <use xlink:href="#icon-success"></use>
+                            </svg>Risk mitigation</li>
+                          <li> <svg class="icon icon--success">
+                              <use xlink:href="#icon-success"></use>
+                            </svg>Transparent practices</li>
+                          <li> <svg class="icon icon--success">
+                              <use xlink:href="#icon-success"></use>
+                            </svg>Operational resilience</li>
+                        </ol>
+                      </li>
+                      <li>
+                        <h4>
+                          Our Process
+                        </h4>
+                        <ol class="numbered-list">
+                          <li>Regulatory analysis</li>
+                          <li>Framework development</li>
+                          <li>Implementation guidance</li>
+                          <li>Ongoing compliance reviews</li>
+                        </ol>
+                      </li>
+                    </ul>
+                  </span>
+                  <span class="toggle_text isClosed">
+                    <svg class="icon icon--dot">
+                      <use xlink:href="#icon-dot"></use>
+                    </svg> Read more
+                  </span>
+                  <span class="toggle_text isOpen">
+                    <svg class="icon icon--cross">
+                      <use xlink:href="#icon-cross"></use>
+                    </svg> Read less
+                  </span>
+                </summary>
+              </details>
+              <span class="toggle_text open_state">
+                <svg class="icon icon--dot">
+                  <use xlink:href="#icon-dot"></use>
+                </svg> Read more
+              </span>
+            </ul>
+            <span class="toggle_text close_state">
+              <svg class="icon icon--cross">
+                <use xlink:href="#icon-cross"></use>
+              </svg>
+            </span>
+            <span class="scroll_label">
+              <svg class="icon icon--arrowlong">
+                <use xlink:href="#icon-arrowlong"></use>
+              </svg> Scroll
+            </span>
+          </div>
+        </div>
+      </section><!--/ section -->
+      <section class="section" id="Story">
+        <div class="section__content">
+          <h2 class="section__title">Our Story</h2>
+          <details class="section__description">
+            <summary class="section__description-inner">
+              People for DAOs (P4D) was born out of
+              a vision to offer People Operations guidance and actionable strategies to Decentralized Autonomous
+              Organizations (DAOs). The goal is enable Web3 workers to build and evolve organizational culture, set
+              transparent people practices, and navigate the compliance intricacies of a centralized world.
+              <div class="hidden_text">
+                Since the inception of P4D, we have also collaborated with companies that follow traditional
+                organizational structures: C-suite leaders, Board of Directors, and various business functions. Our
+                consulting role often mirrors that of a "Fractional Chief People Officer" (CPO), aiding companies to
+                view
+                people operations through the lens of culture, performance, growth, and scalability. Some clients
+                have
+                also sought our expertise for short-term projects concerning compensation, equity, and people
+                analytics.
+                Before founding P4D, there was a wealth of experience in diverse sectors such as Web3, Financial
+                Technology, and Gaming. Prior roles included leading People functions at a Web3/Blockchain
+                Foundation
+                (Maker Foundation) and occupied senior roles in compensation, equity and benefits at ERP (Certinia),
+                Networking (Cisco), and Healthcare (McKesson) companies. That experience also extends to engagements
+                with
+                PE and VC firms like a16z, TCV, and Polychain.
+              </div>
+              <span class="toggle_text isClosed">
+                <svg class="icon icon--dot">
+                  <use xlink:href="#icon-dot"></use>
+                </svg> Read more
+              </span>
+              <span class="toggle_text isOpen">
+                <svg class="icon icon--cross">
+                  <use xlink:href="#icon-cross"></use>
+                </svg> Read less
+              </span>
+            </summary>
+          </details>
+        </div>
+        <div class="section_right">
+          <div class="section__expander"></div>
+          <div class="section__info">
+            <ul class="section__facts">
+              <li class="section__facts-item">
+                <span class="section__facts-detail">Our Partners</span>
+              </li>
+              <li class="section__facts-item">
+                <img class="section__facts-icon" src="./logos/Cisco_logo.png" alt="Cisco logo"
+                  style="max-height: 60px;">
+              </li>
+              <li class="section__facts-item">
+                <img class="section__facts-icon" src="./logos/Sky_logo.png" alt="Sky ecosystem logo">
+              </li>
+              <li class="section__facts-item">
+                <img class="section__facts-icon" src="./logos/Certinia_logo.png" alt="Certinia logo">
+              </li>
+              <li class="section__facts-item">
+                <img class="section__facts-icon" src="./logos/Mambu_logo.png" alt="Mambu logo">
+              </li>
+              <li class="section__facts-item">
+                <img class="section__facts-icon" src="./logos/a16z_logo.png" alt="a16z logo">
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section><!--/ section -->
+      <section class="section" id="Case_Study">
+        <div class="section__content">
+          <h2 class="section__title">Case Studies</h2>
+          <p class="section__description"><span class="section__description-inner">Real results from partnerships with
+              DAOs, FinTech and Gaming Organizations
+            </span>
+          </p>
+        </div>
+        <div class="section_right ">
+          <div class="section__expander"></div>
+          <div class="section__info">
+            <ul class="section__facts info">
+              <details>
+                <summary class="section__facts-item card">
+                  <span class="item_tag">DeFi Protocol DAO</span>
+                  <h3 class="section__facts-title">Collaboration Scaling Operations</h3>
+                  <span class="section__facts-detail">
+                    Helped a leading DeFi protocol scale their operations to manage and monitor a 24-month $100M
+                    transformation project. <i>Full-time role: 24 months.</i>
+                    <ul class="hidden_text">
+                      <li>
+                        <h4>
+                          Key Results:
+                        </h4>
+                        <ol>
+                          <li><svg class="icon icon--success">
+                              <use xlink:href="#icon-success"></use>
+                            </svg>Streamlined SOW process for over 30 DAO teams.</li>
+                          <li><svg class="icon icon--success">
+                              <use xlink:href="#icon-success"></use>
+                            </svg>Assessed and aligned Token incentives across teams.</li>
+                          <li><svg class="icon icon--success">
+                              <use xlink:href="#icon-success"></use>
+                            </svg>Established clear project reporting frameworks.</li>
+                          <li><svg class="icon icon--success">
+                              <use xlink:href="#icon-success"></use>
+                            </svg>Enabled transparent accounting of DAO project funds.</li>
+                        </ol>
+                      </li>
+                    </ul>
+                  </span>
+                  <span class="toggle_text isClosed">
+                    <svg class="icon icon--dot">
+                      <use xlink:href="#icon-dot"></use>
+                    </svg> Read more
+                  </span>
+                  <span class="toggle_text isOpen">
+                    <svg class="icon icon--cross">
+                      <use xlink:href="#icon-cross"></use>
+                    </svg> Read less
+                  </span>
+                </summary>
+              </details>
+              <details>
+                <summary class="section__facts-item card">
+                  <span class="item_tag">European FinTech</span>
+                  <h3 class="section__facts-title">Equity Incentives FinTech</h3>
+                  <span class="section__facts-detail">
+                    Analysis and recommendations to address equity incentives, salary bands and hire a new Head of Total
+                    Rewards. <i>Part-time Role: three projects over 18-months.</i>
+                    <ul class="hidden_text">
+                      <li>
+                        <h4>
+                          Key Results:
+                        </h4>
+                        <ol>
+                          <li><svg class="icon icon--success">
+                              <use xlink:href="#icon-success"></use>
+                            </svg> Aligned technical and non-technical salary bands to relevant local markets.</li>
+                          <li><svg class="icon icon--success">
+                              <use xlink:href="#icon-success"></use>
+                            </svg> Redesigned equity plan program for greater tax efficient and equitable grants.</li>
+                          <li><svg class="icon icon--success">
+                              <use xlink:href="#icon-success"></use>
+                            </svg> Onboarded new Head of Total Rewards.</li>
+                        </ol>
+                      </li>
+                    </ul>
+                  </span>
+                  <span class="toggle_text isClosed">
+                    <svg class="icon icon--dot">
+                      <use xlink:href="#icon-dot"></use>
+                    </svg> Read more
+                  </span>
+                  <span class="toggle_text isOpen">
+                    <svg class="icon icon--cross">
+                      <use xlink:href="#icon-cross"></use>
+                    </svg> Read less
+                  </span>
+                </summary>
+              </details>
+              <details>
+                <summary class="section__facts-item card">
+                  <span class="item_tag">European Gaming Start-up</span>
+                  <h3 class="section__facts-title">Culture Purpose Founders</h3>
+                  <span class="section__facts-detail">
+                    Facilitated co-Founder visions for building a resilient and people-centric company.
+                    <i>Workshop and Part-time Role- various projects over 9-months.</i>
+                    <ul class="hidden_text">
+                      <li>
+                        <h4>
+                          Key Results:
+                        </h4>
+                        <ol>
+                          <li> <svg class="icon icon--success">
+                              <use xlink:href="#icon-success"></use>
+                            </svg>Created a framework to ensure culture could adapt but remain true to company and
+                            people
+                            purpose.</li>
+                          <li> <svg class="icon icon--success">
+                              <use xlink:href="#icon-success"></use>
+                            </svg>Provided foundational insight in revenue-sharing program.</li>
+                        </ol>
+                      </li>
+                    </ul>
+                  </span>
+                  <span class="toggle_text isClosed">
+                    <svg class="icon icon--dot">
+                      <use xlink:href="#icon-dot"></use>
+                    </svg> Read more
+                  </span>
+                  <span class="toggle_text isOpen">
+                    <svg class="icon icon--cross">
+                      <use xlink:href="#icon-cross"></use>
+                    </svg> Read less
+                  </span>
+                </summary>
+              </details>
+              <span class="toggle_text open_state">
+                <svg class="icon icon--dot">
+                  <use xlink:href="#icon-dot"></use>
+                </svg> Read more
+              </span>
+            </ul>
+            <span class="toggle_text close_state">
+              <svg class="icon icon--cross">
+                <use xlink:href="#icon-cross"></use>
+              </svg>
+            </span>
+            <span class="scroll_label">
+              <svg class="icon icon--arrowlong">
+                <use xlink:href="#icon-arrowlong"></use>
+              </svg> Scroll
+            </span>
+          </div>
+        </div>
+      </section><!--/ section -->
+    </div>
+    <div class="section__more">
+      <div class="section__more-inner section__more-inner--bg1">
+        <div class="section__more-link">
+          <a href="https://discord.com/users/857640842889396265" target="_blank" class="section__more-link-inner">
+            <img src="./icons/Discord_Thin.svg" alt="Discord logo" class="contact-icon" />
+          </a>
+          <a href="mailto:1stperson@people4daos.com" target="_blank" class="section__more-link-inner">
+            <img src="./icons/Mail_Thin.svg" alt="mail logo" class="contact-icon" />
+          </a>
+          <a href="https://t.me/people4daos" target="_blank" class="section__more-link-inner">
+            <img src="./icons/Telegram_Thin.svg" alt="telegram logo" class="contact-icon" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
